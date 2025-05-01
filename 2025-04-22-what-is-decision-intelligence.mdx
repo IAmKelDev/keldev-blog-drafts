@@ -1,0 +1,213 @@
+---
+slug: what-is-decision-intelligence
+title: What is Decision Intelligence? (Decision Modeling Intro)
+tags: [decision-intelligence, technical]
+description: "An introduction to Decision Intelligence: what it means to engineer decisions and why it's useful, with a worked example."
+---
+
+I have a lot of fun technical topics I want to discuss related to Decision Intelligence (DI), and the process of creating standards, data formats, and tooling for DI as part of my work for [OpenDI](https://opendi.org/).
+
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_Simulation.gif" target="blank"><img decoding="async" loading="lazy" alt=".gif of a simulated decision" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_Simulation.gif"/></a>
+> (I made this tool! You can [try it here](https://opendi.org/cdd-authoring-tool/), in your browser.)
+
+There _is_ good introductory material out there for understanding DI, but it's generally not well suited as a lead-in for the topics I want to write about. So I'm laying my own groundwork!
+
+We'll start by defining **Decision Intelligence** and some of its core concepts.
+
+{/*truncate*/}
+
+I'll note up front that most of the concepts in this post are based on the work of [Dr. Lorien Pratt](https://www.lorienpratt.com/), who invented DI in the first place. The [DI Handbook](https://www.oreilly.com/library/view/the-decision-intelligence/9781098139643/) that she co-authored with [Nadine Malcolm](https://www.linkedin.com/in/nadine-malcolm-69739/) is the best resource around if you want a deeper dive into DI.
+
+## What is Decision Intelligence?
+
+This term is chaotic right now. When you look it up, it's hard to find a consistent definition for it.
+
+Sometimes you find jargon soup:  
+> "Start with a _data_ stock. Add a dash of _machine learning_, 1 teaspoon of _AI_ from concentrate, 3-5 _visualizations_ (shelled), and 3/4 cup of diced _managerial theory_.  
+> Pressure cook on high for 25 minutes. Serves 3 LinkedIn posts."
+
+Or you get vague generalizations:  
+> "It's when you use AI to help make decisions!"
+
+I think this definition [from Gartner](https://www.gartner.com/en/information-technology/glossary/decision-intelligence) is decent:
+> "Decision intelligence (DI) is a practical discipline that advances decision making by explicitly understanding and engineering how decisions are made and how outcomes are evaluated, managed and improved via feedback."
+
+This definition implies some follow-up questions that are a lot more specific and useful:
+- How do you turn decision-making into an engineering process?
+- How do you evaluate outcomes?
+- What should those feedback processes look like?
+
+One reason DI gets turned into jargon soup is because decision-making is _hard_. We've already created lots of disciplines that approach it in different ways. DI often acts as an integration framework that helps _align_ these existing tools and disciplines around common principles. So a lot of the disciplines attached to those tasty bits of jargon are still _involved_, but you can't just hand a data scientist a Large Language Model and expect Decision Intelligence to materialize.
+
+You need structure!
+
+## Modeling decisions
+
+Most of this post will be about that first follow-up question:
+> How do you turn decision-making into an engineering process?
+
+In short, _you model decisions_!
+
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/Coffee_Decision_Model.png" target="_blank"><img decoding="async" loading="lazy" alt="Coffee Decision Model" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/Coffee_Decision_Model.png"/></a>
+
+If you can deconstruct the concept of a decision, break it down into a vocabulary of common components and features, then you can use that vocabulary to describe any decision you want.
+
+### Why is this useful?
+
+Once you have a common vocabulary, you can write stuff down.  
+You can capture decisions! **You can _draw_ them.**
+
+If every stakeholder involved can see a decision laid out visually, any one of them can point at it and say "actually, I think it should look like _this_ instead".
+
+_Conversation_ is the classic medium for decision-making. But conversation is fuzzy! Everyone has their own perspective, and it can take a lot of careful discussion to tease apart discrepancies in each person's mental image of a situation. When you model the decision instead, you can collaborate to _synthesize_ those individual mental images into a more concrete consensus. You can align around the _mechanics_ of a decision.
+
+When your model is digital, and your vocabulary is sophisticated enough, you can even do **simulation**!
+
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_Simulation.gif" target="blank"><img decoding="async" loading="lazy" alt=".gif of a simulated decision" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_Simulation.gif"/></a>
+
+Whether you're doing realtime decision simulation or you're just collaborating on some whiteboard doodles of decision diagrams, DI offers enough of a framework that _engineering_ can take place. You can begin to conceptualize and discuss decisions as **systems**.
+
+## Causal Decision Models
+
+Let's dig into the specific vocabulary for those systems!
+
+DI represents decisions visually as special [Directed Graphs](https://en.wikipedia.org/wiki/Directed_graph), where elements in the directed graph are related to each other by _cause and effect_.
+
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_0_Cause_Effect.png" target="blank"><img decoding="async" loading="lazy" alt="Example showing cause and effect" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_0_Cause_Effect.png"/></a>
+
+When an arrow points from `Element A` to `Element B`, you can say that `Element A` _causes_ `Element B`.
+
+Each element in a Decision Model fits into one of a few categories.
+### Levers and Outcomes
+
+These elements frame the boundaries of a decision. When you're trying to draft a Decision Model, it often helps to brainstorm elements in these categories first.
+#### Levers
+
+Levers represent the _actions_ available to the decision-maker.  
+They answer the question "_What can I do in this situation?_" by providing some possible options.
+
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_1_Lever.png" target="blank"><img decoding="async" loading="lazy" alt="Example step 1: Lever" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_1_Lever.png"/></a>
+
+An example might be "Amount of money I budget for marketing this year".
+
+#### Outcomes
+
+Outcomes represent end results of a decision.  
+This is not necessarily the same as a [Goal](https://opendi.org/OpenDI%20Glossary#goal), since Outcomes generally don't judge the success or failure of the decision.
+
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_2_Outcome.png" target="blank"><img decoding="async" loading="lazy" alt="Example step 2: Outcome" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_2_Outcome.png"/></a>
+
+An example might be "Amount of revenue `{Company}` makes this year".
+
+A Goal would place a _constraint_ on this Outcome, like "`{Company}` makes $`{amount}` in revenue this year".
+
+### Intermediates
+
+Intermediates fill in all of the causal relationships between Levers and Outcomes.  
+Sometimes `Element A` does not _directly_ cause `Element B`.
+
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_3_Intermediate.png" target="blank"><img decoding="async" loading="lazy" alt="Example step 3: Intermediate" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_3_Intermediate.png"/></a>
+
+
+An example might be "Number of impressions that marketing generates this year".
+
+Intermediates are tricky. There are often many indirect links between any given Lever and any number of Outcomes. It's common to fill these in by iterating, working inward from Levers and Outcomes.
+
+#### Iterating with "how" and "why"
+
+To discover _downstream_ Intermediates, ask ["Why?"](https://opendi.org/OpenDI%20Glossary/#why-chain). To discover _upstream_ Intermediates, ask ["How?"](https://opendi.org/OpenDI%20Glossary/#how-chain).  
+
+<details>
+<summary>Let's explore this approach!<br/><b>Expand for examples:</b></summary>
+<p>
+In the above example, you might ask:
+> Q: **Why** are we considering changing the marketing budget for this year?  
+> A: _Because it will impact the number of impressions our marketing campaign generates this year._
+
+And further, 
+> Q: **Why** is the number of impressions this year important?  
+> A: _Because somewhere further downstream, impressions will impact our revenue this year._
+
+From this exercise, you might conclude that it would make sense to add more intermediates to this model!
+
+> Q: **Why** is the number of impressions important?  
+> A: _Because some of those impressions [convert](https://en.wikipedia.org/wiki/Conversion_marketing) into new customers, which impacts revenue._
+
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_4_How_Why.png" target="blank"><img decoding="async" loading="lazy" alt="Example step 4: How/Why Intermediates" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_4_How_Why.png"/></a>
+<br/><br/>
+Going the other direction, you might ask:  
+> Q: Aside from changing the number of impressions, **how** else could we get more conversions out of our marketing budget?  
+> A: _We might improve the quality of our marketing._
+</p>
+</details>
+
+We could go much further, but we'll leave the example here for now:  
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_5_How_Why_2.png" target="blank"><img decoding="async" loading="lazy" alt="Example step 5: How/Why Intermediates" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_5_How_Why_2.png"/></a>
+
+### Externals
+
+Externals are similar to Levers. They directly affect Intermediates or Outcomes.  
+Unlike Levers though, Externals are _outside_ of the decision-maker's control for the current decision.  
+Externals answer the question "_What else might impact this situation besides me?_" by providing some possible options.
+
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_6_External.png" target="blank"><img decoding="async" loading="lazy" alt="Example step 6: External" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_6_External.png"/></a>
+
+An example might be "Yearly production expenses for `{Company}` goods and services".
+
+### Keep it quantifiable
+
+Decision elements are much more useful when they represent something _quantifiable_.  
+> _What are the units for each Lever, Intermediate, etc.?_
+
+Not only does quantifiability simplify simulation later on, but it also more clearly illustrates _stakes_ and _value_.  
+> _When is this happening, and exactly how much will it help?_
+
+If you were bothered by the vagueness of our _Quality of marketing_ element, this might be why!
+
+Let's modify it slightly. How might we measure marketing quality? Maybe we could focus on the resources allocated to each individual marketing campaign. 
+
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_7_Quantifiability.png" target="blank"><img decoding="async" loading="lazy" alt="Example step 7: Quantifiability" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_7_Quantifiability.png"/></a>
+
+This gives a better idea of what sorts of numbers we might associate with this element.
+
+### Decision Scope
+
+Some of you might still be asking "How?" and "Why?" for the elements we have now. As you fill in gaps around these Intermediates, you might wonder how much of this budgeting decision depends on how the marketing team decides to _utilize_ the budget you give them. There are lots of different things they can do with that money!
+
+What you've uncovered is essentially another decision _embedded_ in your original one. A good rule of thumb is that your model should be carefully scoped to consider only _one_ decision whenever possible. The decision-maker needs to have agency over _all_ of the relevant Levers for that one decision.
+
+In this case, _"marketing budget utilization strategy"_ might become an adjustable, flat ratio of some sort (e.g. quality vs. quantity), representing this utilization decision as an External. This way you can account for a range of possibilities without having to make that decision yourself.
+
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_8_Scope.png" target="blank"><img decoding="async" loading="lazy" alt="Example step 8: Scope" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/CDD_8_Scope.png"/></a>
+
+You could easily make this more complex! You could set up your ratio as a curve across a range of possible budgets. You could build a resource allocation algorithm based on prior data.
+
+If it's a big enough concern, you might decide to sit down with your marketing team and model this utilization decision with them, to give you a better idea of how to account for it in your own decision. If you come up with a good model, you might even embed it into a simulated version of your budget decision model, as a sub-model.
+
+## Engineering decisions
+
+In this post, we've already taken our example model through a design iteration or two.
+
+We've added more Intermediates to fill in the causal links between Levers and Outcomes. We've considered quantifiability and scope. We've even noted a specific area where it could be useful to integrate prior data and talk to other experts (our marketing team).
+
+This is engineering!  
+We could continue to refine this with more elements. We could hook up scripts and input/output values and run simulations. We might even find a specific area or two where it makes sense to add our dash of machine learning or our AI-from-concentrate, to help model some of these causal links.
+
+For now, we're already approaching a better understanding of this particular decision!  
+At least in theory. I don't work in marketing, so hopefully I haven't misinterpreted or misapplied any basic concepts.
+
+If I have, please [let me know](mailto:keldtdev@gmail.com)!
+
+## Looking ahead
+
+Hopefully this post has laid a solid foundation for the answer to this question:
+> How do you turn decision-making into an engineering process?
+
+Moving forward, I have plans for a few topics about design decisions and challenges I've faced while building software solutions that help with the decision engineering process.
+
+Over the past year I've built a [browser-based engine](https://opendi.org/cdd-authoring-tool/) for displaying and authoring interactive decision models, and designed [data schemas](https://github.com/opendi-org/cdm-json-schema) for representing decisions, [transmitting](https://github.com/opendi-org/example-api-go) them, and using them in the engine. I have a lot to talk about!
+
+<a class="zoomable" href="https://assets.keldev.net/2025/04/what-is-decision-intelligence/Schema_Doodle.png" target="blank"><img decoding="async" loading="lazy" alt="Juicy doodle of JSON schema data structure" class="img_ev3q" src="https://assets.keldev.net/2025/04/what-is-decision-intelligence/Schema_Doodle.png"/></a>
+> I plan to talk about juicy WIP doodles like this (and some significantly more polished ones as well). Stay tuned!
+
+You can subscribe to my [RSS feed](https://keldev.net/blog/rss.xml) for post notifications.

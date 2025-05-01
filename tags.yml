@@ -1,0 +1,30 @@
+technical:
+  label: Technical
+  permalink: /technical
+  description: Technical posts about software, coding, etc.
+
+music:
+  label: Music
+  permalink: /music
+  description: Posts about music.
+
+media:
+  label: Media
+  permalink: /media
+  description: Posts about media (music, games, books, etc.).
+
+blog-updates:
+  label: Blog Updates
+  permalink: /blog-updates
+  description: Updates about this blog! New features or changes.
+
+decision-intelligence:
+  label: Decision Intelligence
+  permalink: /decision-intelligence
+  description: Posts about Decision Intelligence (DI), decision modeling, OpenDI, etc.
+
+misc:
+  label: Misc.
+  permalink: /misc
+  description: Miscellanious posts that may not fit into many (or any) other categories.
+
