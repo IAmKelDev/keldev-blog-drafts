@@ -3,7 +3,6 @@ slug: blog-update-comments-images
 title: Site Update! Blog Comments*, Images
 tags: [blog-updates]
 description: "My blog has comments and reactions now! Plus some other changes."
-unlisted: true
 ---
 
 **\*GitHub users only rn.**
@@ -27,42 +26,43 @@ My blog posts have comments and reactions now! They're down at the bottom of eac
 I'm hoping my blog will eventually have some blend of technical content and opinion-y content. So I'm hoping comments will facilitate Q&A for technical content, and give space for broader discussions around opinion-y content. I don't anticipate much activity, but I want to nurture what I can!
 
 **How?**  
-[Giscus!](https://giscus.app/). This little tool lets you associate [GitHub Discussion Threads](https://docs.github.com/en/discussions/collaborating-with-your-community-using-discussions/about-discussions) in your repository with pages on your website. 
+[Giscus](https://giscus.app/)! This little tool lets you associate [comment threads in your GitHub repo](https://docs.github.com/en/discussions/collaborating-with-your-community-using-discussions/about-discussions) with pages on your website. 
 
 Integration is simple. Giscus is a GitHub App so adding it to a repo is trivial. Once it's added, you can integrate it to a Docusaurus site with the [`@giscus/react`](https://www.npmjs.com/package/@giscus/react) npm package. This gives you a little HTML tag that you can tell Docusaurus to attach to every Blog page.
 
-I looked at these tutorials for help:
+I used these tutorials for help:
 - [Daniel Farlow - How to add a comments section to doc pages and blog entries using giscus](https://dwf.dev/blog/2022/10/27/2022/giscus-comments)
 - [m19v - How to add Giscus comments to Docusaurus](https://dev.to/m19v/how-to-add-giscus-comments-to-docusaurus-439h)
 
-Giscus only supports comments for registered GitHub users right now. GitHub accounts are free and easy to make, but I'd probably enable anonymous comments [if they ever add support](https://github.com/giscus/giscus/issues/65).
+Giscus only supports comments for registered GitHub users right now. GitHub accounts are free and easy to make, but I'd probably enable anonymous comments [if they ever add support](https://github.com/giscus/giscus/issues/65)! If you don't want to make a GitHub account, you can always [email me](mailto:keldtdev@gmail.com).
 
 ## Image hosting
 
-I'm serving images from a personal cloud storage bucket, via a custom subdomain (`assets.keldev.net/[image]`).
+I'm serving this site's images from a personal cloud storage bucket, via a custom subdomain (`assets.keldev.net/[image]`).
 
 **Why?**  
-Usually websites like mine just use something like [imgbb](https://imgbb.com/) or [imgur](https://en.wikipedia.org/wiki/Imgur) for images, or just store images in their repo directly. Services like this work fine!
+Usually websites like mine just use something like [imgbb](https://imgbb.com/) or [imgur](https://en.wikipedia.org/wiki/Imgur) for images (or just store images in their repo directly). These are generally fine!
 
-The biggest thing I get out of my setup is the ability to serve images over that custom subdomain, with more control over what the URL ends up being. So my image links end up looking like https://assets.keldev.net/test-flower.jpg instead of https://ibb.co/rRhGd8gH. I've also got the same amount of control over my image files that I've got with everything else in my personal storage. I can perma-delete or replace them, and re-download the original files whenever. I'm already paying for file storage with this service, and this solution didn't add any other costs.
+The biggest thing I get out of my setup is the ability to serve images over that custom subdomain, with more control over what an image's URL will be. So my image links end up looking like https://assets.keldev.net/test-flower.jpg instead of https://ibb.co/rRhGd8gH. I've also got the same amount of control over my image files that I've got with everything else in my personal storage. I can perma-delete or replace them. I can re-download the original files whenever. I'm already paying for file storage with this service, and this solution didn't add any other costs, so it works out well!
 
 <a class="zoomable" href="https://assets.keldev.net/test-flower.jpg" target="_blank"><img decoding="async" loading="lazy" alt="Test image of an overexposed peony bud with some ants on it" class="img_ev3q" src="https://assets.keldev.net/test-flower.jpg"/></a>
 > Here's that test flower image, for the curious.
 
 **How?**  
 My solution comes directly from the [Backblaze B2 docs](https://www.backblaze.com/docs/cloud-storage-deliver-public-backblaze-b2-content-through-cloudflare-cdn)!  
-I followed the instructions here pretty much exactly. This involved setting up a public B2 bucket (which is trivial once you're using B2), and setting my domain up with Cloudflare (which was fairly straightforward).
+I followed the instructions here pretty much exactly. This involved setting up a _public_ B2 bucket (which is trivial once you're using B2), and setting up my domain with Cloudflare (which is actually pretty straightforward).
 
 
 ## Content management
 
-My site is now split across two repos. [iamkeldev.github.io](https://github.com/IAmKelDev/iamkeldev.github.io) holds everything _except_ for the actual contents of my Blog posts, and [keldev-blog-drafts](https://github.com/IAmKelDev/keldev-blog-drafts) holds Blog post contents.
+My site is now split across two repos.  
+[iamkeldev.github.io](https://github.com/IAmKelDev/iamkeldev.github.io) holds everything _except_ for the actual contents of my blog posts, and [keldev-blog-drafts](https://github.com/IAmKelDev/keldev-blog-drafts) holds those blog posts.
 
 **Why?**  
-This honestly doesn't do much. The site is just _slightly_ more modular, [concerns are _slightly_ more separated](https://en.wikipedia.org/wiki/Separation_of_concerns). Edit history for the "main" site is no longer tied up with edit history for my blog post drafts. I can do all kinds of messy edits to each repo individually, and the messiness won't overlap much.
+This honestly doesn't do much. The site is just _slightly_ more modular. [Concerns are _slightly_ more separated](https://en.wikipedia.org/wiki/Separation_of_concerns). Edit history for the "main" site is no longer tied up with edit history for my blog post drafts. I can do all kinds of messy edits to each repo individually, and the messiness won't overlap as much.
 
 **How?**  
-`keldev-blog-drafts` is mounted as a [Git Submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules), so that its contents go into the `blog/` directory. This is a very basic Git Submodule use case.
+`keldev-blog-drafts` is mounted as a [Git Submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules), so that its contents go into the `blog/` directory. This is a basic Git Submodule use case.
 
 ## Try out the comments system!
 
