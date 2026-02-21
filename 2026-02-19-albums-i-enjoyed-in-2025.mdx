@@ -1,0 +1,744 @@
+---
+slug: albums-i-enjoyed-in-2025
+title: Albums I Enjoyed in 2025
+tags: [music, media]
+description: "A list of albums I enjoyed in 2025, with some thoughts about each."
+draft: true
+---
+
+import AlbumsTagCloud from "./2026-02-19-albums-tag-cloud";
+
+<style>{`
+    .lyrics {
+        font-size: 0.85rem;
+        blockquote {
+            background-color: rgba(129, 129, 129, 0.075);
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+        }
+    }
+    .album-tag-cloud {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        width: 80%;
+    }
+    .album-tag {
+        background-color: rgba(129, 129, 129, 0.075);
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-bottom: 5px;
+        line-height: 93%;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-bottom: 3px;
+        border: 1px solid var(--ifm-color-content);
+        border-radius: 10px;
+        font-family: var(--ifm-heading-font-family);
+        white-space: nowrap;
+    }
+    .album-tag:hover {
+            cursor: pointer;
+            background-color: rgba(129, 129, 129, 0.55);
+        }
+    `}</style>
+
+I listened to a bunch of good music last year and now I wanna talk about it.  
+I actually wanted to talk about it weeks ago when a year-end list would've been more relevant but I'm slow!
+
+{/*truncate*/}
+
+Ideally this would've been a series of posts that I made throughout the 2025 where I occasionally talked about whatever I'd been listening to recently...
+So this is what happens when I let my plans to make a bunch of posts like that pile up for a whole year! Hopefully I don't do that again this year.
+
+export const albumTags = [
+    {
+        link: "#live-at-revolution-hall-adrianne-lenker",
+        albumTitle: "Live At Revolution Hall",
+        albumArtist: "Adrianne Lenker",
+        tags: ["live", "singer-songwriter", "folk", "psychedelic", "field recordings", "spoken word"]
+    },
+    {
+        link: "#2-foxwarren",
+        albumTitle: "2",
+        albumArtist: "Foxwarren",
+        tags: ["soft", "sampling", "rock"]
+    },
+    {
+        link: "#night-palace-mount-eerie",
+        albumTitle: "Night Palace",
+        albumArtist: "Mount Eerie",
+        tags: ["folk", "rock", "slacker rock", "field recordings", "noise", "spoken word", "progressive"]
+    },
+    {
+        link: "#straight-line-was-a-lie-the-beths",
+        albumTitle: "Straight Line Was A Lie",
+        albumArtist: "The Beths",
+        tags: ["rock", "powerpop", "pop rock"]
+    },
+    {
+        link: "#double-infinity-big-thief",
+        albumTitle: "Double Infinity",
+        albumArtist: "Big Thief",
+        tags: ["folk", "rock", "psychedelic", "americana"]
+    },
+    {
+        link: "#imaginal-disk-magdalena-bay",
+        albumTitle: "Imaginal Disk",
+        albumArtist: "Magdalena Bay",
+        tags: ["pop", "synthpop", "psychedelic", "progressive", "electronic", "maximalist"]
+    },
+    {
+        link: "#cancionera-and-de-todas-las-flores-natalia-lafourcade",
+        albumTitle: "Cancionera",
+        albumArtist: "Natalia Lafourcade",
+        tags: ["singer-songwriter", "folk", "spanish language"]
+    },
+    {
+        link: "#cancionera-and-de-todas-las-flores-natalia-lafourcade",
+        albumTitle: "De Todas Las Flores",
+        albumArtist: "Natalia Lafourcade",
+        tags: ["singer-songwriter", "folk", "spanish language"]
+    },
+    {
+        link: "#keep-me-on-your-mind--see-you-free-bonny-light-horseman",
+        albumTitle: "Keep Me On Your Mind / See You Free",
+        albumArtist: "Bonny Light Horseman",
+        tags: ["folk", "americana", "rock"]
+    },
+    {
+        link: "#glory-perfume-genius",
+        albumTitle: "Glory",
+        albumArtist: "Perfume Genius",
+        tags: ["singer-songwriter", "pop", "rock", "progressive"]
+    },
+    {
+        link: "#lives-outgrown-beth-gibbons",
+        albumTitle: "Lives Outgrown",
+        albumArtist: "Beth Gibbons",
+        tags: ["folk", "psychedelic", "progressive", "rock"]
+    },
+    {
+        link: "#only-dust-remains-backxwash",
+        albumTitle: "Only Dust Remains",
+        albumArtist: "Backxwash",
+        tags: ["hip hop", "rap", "rock", "sampling"]
+    },
+    {
+        link: "#im-only-fking-myself-and-this-wasnt-meant-for-you-anyway-lola-young",
+        albumTitle: "I'm Only F**king Myself",
+        albumArtist: "Lola Young",
+        tags: ["pop rock", "singer-songwriter", "pop"]
+    },
+    {
+        link: "#im-only-fking-myself-and-this-wasnt-meant-for-you-anyway-lola-young",
+        albumTitle: "This Wasn't Meant For You Anyway",
+        albumArtist: "Lola Young",
+        tags: ["pop rock", "singer-songwriter", "pop"]
+    },
+    {
+        link: "#forever-howlong-black-country-new-road",
+        albumTitle: "Forever Howlong",
+        albumArtist: "Black Country, New Road",
+        tags: ["rock", "pop", "folk", "progressive", "theatrical"]
+    },
+    {
+        link: "#virgin-lorde",
+        albumTitle: "Virgin",
+        albumArtist: "Lorde",
+        tags: ["pop", "electronic"]
+    },
+    {
+        link: "#for-melancholy-brunettes--sad-women-japanese-breakfast",
+        albumTitle: "For Melancholy Brunettes (& Sad Women)",
+        albumArtist: "Japanese Breakfast",
+        tags: ["pop", "folk", "soft", "rock"]
+    },
+    {
+        link: "#ego-death-at-a-bachelorette-party-hayley-williams",
+        albumTitle: "Ego Death At A Bachelorette Party",
+        albumArtist: "Hayley Williams",
+        tags: ["singer-songwriter", "rock", "pop", "pop rock"]
+    },
+    {
+        link: "#lux-rosalía",
+        albumTitle: "Lux",
+        albumArtist: "Rosalía",
+        tags: ["spanish language", "pop", "orchestral", "maximalist", "theatrical"]
+    },
+    {
+        link: "#who-is-the-sky-david-byrne--ghost-train-orchestra",
+        albumTitle: "Who Is The Sky?",
+        albumArtist: "David Byrne & Ghost Train Orchestra",
+        tags: ["pop", "silly"]
+    }
+]
+
+<AlbumsTagCloud
+    tags = {albumTags}
+/>
+
+## Housekeeping
+
+Couple notes:
+
+This list is not really ranked. Stuff will be closer to the top based on how excited I am to share my thoughts about it, which is not always the same as how good I think it is. I'm not bothering to figure out my 12th favorite album of 2025 vs my 11th and so on. I liked all of these albums!
+
+This will all be music I first _listened to_ in 2025, whether it came out in 2025 or not. It's all recent though.
+
+
+
+Did I manage to make a playlist of tracks from these albums?
+If so, hopefully there's a link up here.
+
+
+## Albums!
+
+### _Live at Revolution Hall_ (Adrianne Lenker)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/adrianne-lenker-live-at-revolution-hall.jpg" target="blank"><img decoding="async"  alt="Adrianne Lenker - Live at Revolution Hall" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/adrianne-lenker-live-at-revolution-hall.jpg"/></a>
+**live / singer-songwriter folk / field recordings**  
+2025 (via 4AD)
+
+<div className='lyrics'>
+> "Here we are. For a brief infinite moment. Together in this room, everything has led up to this point."  
+> \[object clatters] \[Adrianne chuckles]  
+> "[And we're together!](https://genius.com/Adrianne-lenker-not-a-lot-just-forever-live-lyrics)"
+
+> True and rare, to travel through the chambers of your care  
+> Soft and true, to welcome in the emptiness with you  
+> If love will grow, how do we follow the light  
+> Which ripples like a dream over the serene summer night  
+> [And it knows no limit](https://genius.com/Adrianne-lenker-no-limit-live-lyrics)  
+
+> "This is one of my favorite songs.. uh, of mine." \[laughs]  
+> "But I for some reason never.. it never ended up anywhere and.. I dunno, I barely ever play it.  
+> Think it's just one of those like, personal songs. [Play it just for feeling better.](https://genius.com/Adrianne-lenker-no-limit-live-lyrics)"  
+
+> We moved into a real house, a wild field behind it  
+> I wanted to be an inventor  
+> Collected scraps to make a portal  
+> I wanted so much for magic to be real  
+> So many dreams of flying, rising high over the crowd  
+> And they'd go "Oh man, look at her go!"  
+> [And I'd go!](https://genius.com/Adrianne-lenker-real-house-live-lyrics)  
+
+> "Request for a double piano 'Zombie Girl'  
+> Just piano! Just piano but you two playing _together_ on piano? Can we hear that?  
+> ...Ready?"  
+> 
+> What's on your mind, what's on your mind?  
+> What's on your mind, what's on your mind?  
+> What's on your mind?  
+> 
+> \[laughter] "Yay!" "[That was fun.](https://genius.com/Adrianne-lenker-zombie-girl-live-lyrics)"
+</div>
+
+I usually don't get into live albums but this ended up being my favorite release of 2025, easily. And I really liked a lot of stuff in 2025!
+
+Most of the live albums I've listened to are straightforward, high-quality recordings of some songs that some artist played over some performance(s). Maybe they'll leave in some chatter, crowd noises, some of the transitional time where the band is setting up for the next song, or they might even just give you a whole show unedited, front-to-back.
+
+This album is not straightforward. _Live at Revolution Hall_ plays like a mildly psychedelic, scrapbook-style audio documentary covering a few days of Adrianne Lenker's 2024 solo tour. What makes it so compelling is its commitment to capturing so many moments that are _not_ performances of the songs I already know and love, and presenting these vignettes with equal reverence for how they contribute to the atmosphere of the tour. There are moments that speak to what it's like to attend shows like this, to perform for a lovely crowd, to prepare and practice before the doors have opened, and to play and fiddle around on the road with your musician friends.
+
+You'll hear fragments of soundchecks, where performances stumble or hold while someone in the background asks for "more piano please". There's a clip of venue workers checking IDs at the door.  Fans record brief messages for Adrianne. Adrianne records brief notes-to-self and can't figure out how to turn off the recorder. Between shows, she asks a fan for some artistic direction after they request that she draw a star on a poster or something. They giggle about it.
+
+Adrianne's presence throughout is as warm and genuine as you'd expect from her. What I _wasn't_ expecting was to gain such an appreciation for Andrew Sarlo's mark on the project. Sarlo is this album's recording engineer and producer, whose goal was to "put friendship at the focal point making this a loving memento from one friend to another" ([source](https://shop.4ad.com/release/505670-adrianne-lenker-live-at-revolution-hall)).
+
+You feel that in the editing. There's a live version of Lenker's song "Indiana" on this album, here titled "indiana & sneezing". You hear the intro, the first verse, and a couple sneezes from the audience, clearly from the same person. By the end of the first chorus they've sneezed enough times that Adrianne takes a second to throw out a "bless you" over the short interlude before the song's second verse. While the crowd laughs in reaction, the album transitions to the next track, its attention flowing to a different moment entirely. "Indiana" has another verse and another chorus, but "indiana & sneezing" is about something else, so it does not.
+
+That next moment, by the way, isn't in front of a crowd. It's some other time and place entirely. It's not really even a song, but the transition is seamless anyway. "indiana & sneezing" leaves off in the middle of a performance as laughter ripples through the crowd around the room, and the next track picks up with Adrianne giggling, among friends, at her own attempts to cover Dick Gaughan's rendition of "Now Westlin Winds". Laughter bridges these two moments, as it does many others on the album. These quieter off-stage interactions between Lenker and the other touring musicians add a layer of color to their group dynamics. Even when they're not performing, they still share quality time, silly thoughts, and even more music with each other.
+
+Those more private performances often feel almost conversational, they're so casual. One recording starts with Lenker saying "Got one for ya" as she strums the opening chords of an unreleased song. It's apparently unfinished; she trails off at the end, saying "That's all I got! That's an old, old..." and the response is an incredulous "How old is _that_!?". A similar off-stage performance crops up after an impromptu delivery of a verse from "Moon River" by Henry Mancini. Lenker ends that performance (of "fangs") with a thoughtful "Maybe I should play that one". [Looks like](https://www.setlist.fm/setlist/adrianne-lenker/2024/revolution-hall-portland-or-3a96d07.html) she did, for the record, but the on-stage performance does not appear on the album.
+
+Other tracks stitch together multiple performances, letting these public and private contexts and spaces blur into each other. A spacious, tape-hiss-filled soundcheck with background chatter will give way to a polished, fully-accompanied, proper performance with audience reactions. "anything - live" interpolates a few different perspectives of a couple different performances of Adrianne's tentpole closer track. The overall impression lands somewhere deep in the middle of everything - down in the front row, in the back of the room, on the stage, in preparation and in execution, in play and in careful practice, in the art and the artist and the community around the both of them.
+
+Nick Hakim and Josefin Runsteen, the pianist and violinist that accompany Lenker onstage, also deserve special mention for their influence on the sound and experience of _Live at Revolution Hall_. They take what were originally (stellar) solo Lenker songs and turn them into collaborative, transformative reinterpretations of those pieces with their (also stellar) performances. "real house - live" sheds some of the pensive, wandering slowness of its studio version and trades it for more driving and dynamic instrumentals. Runsteen's violin climbs and soars as Lenker describes her dreams of flying. Hakim's piano is the core that sticks around when the rest of the accompaniment drops away as Lenker recalls her family mourning their dog. The ethereal atmosphere of "Symbol" takes on a simmering, more intense undertone in "symbol - live". These sorts of reinterpretations fit right in among Lenker's wider body of work. She herself has never been afraid to re-record and re-release new studio versions of old songs in new contexts, with new collaborators. See Indiana ([1](https://open.spotify.com/track/0KHCEaiT5GV9XuoHIyjX0L), [2](https://open.spotify.com/track/1EUYnTI3P1DzoeccZ0IHdD)), Terminal Paradise ([1](https://open.spotify.com/track/46RRzMguqNp8omPkO5HVwt), [2](https://open.spotify.com/track/1O8TjQfVyFm10RjM76Vdzk)), From ([1](https://open.spotify.com/track/4Dpoxf3BxxvUbGgVXIlBEK), [2](https://open.spotify.com/track/6pnyk7XWOC1gtgh1KI2ymo)), Vampire Empire ([1](https://open.spotify.com/track/4SwSpxsOYtnEaRxWtYrnvZ), [2](https://open.spotify.com/track/2DSxUFEL5v1YT8CwYzhWyf)), and probably some others I'm forgetting. She takes a similar approach to live performance. In interviews, she's talked about how "I might be angry one night and let it flow through me and scream and go a whole tour without feeling like it's natural to do it again," and, "If you love a live \[performance] recorded on someone's phone, it's cool. Just listen to that" (both from [this Vulture interview](https://www.vulture.com/article/big-thief-interview-double-infinity-max-oleartchik.html)).
+
+Andrew Sarlo said of the project, "It was impossible to do this album without the immense love and respect I have for my friend. Watching the power of the music disarm and permeate feels a bit like an 'I told ya so' but I am still amazed every time. From the sidelines I cheer" ([source](https://shop.4ad.com/release/505670-adrianne-lenker-live-at-revolution-hall)). I'm so glad he got his moment of smug satisfaction, cuz he was absolutely right. _Live at Revolution Hall_ is truly singular, and so loving. Now I just need to actually see her live, lol.
+
+
+### _2_ (Foxwarren)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/foxwarren-2.jpg" target="blank"><img decoding="async"  alt="Foxwarren - 2" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/foxwarren-2.jpg"/></a>
+**sample-heavy / chamber pop / soft rock**  
+2025 (via ANTI-)
+
+<div className='lyrics'>
+> And though I've not been listening to what you've been saying  
+> I have my own words prepared  
+> I'll put you right back where you belong  
+> And though I have no formal training on the current subject  
+> [Once I open my mouth you'll see how sharp I really am](https://genius.com/Foxwarren-listen2me-lyrics)  
+
+> I'll bet you sing just how you laugh  
+> Toss your head back, let it out light and free  
+> Follow through, again and again, my heart is filled with you  
+> I'll bet you dream just how you laugh  
+> With the meaning of life from the dew in the tall grass  
+> [Follow through, again and again, my heart is filled with you](https://genius.com/Foxwarren-again-lyrics)  
+</div>
+
+I didn't expect much from this album, so it ended up being perhaps the most surprising release I paid attention to this year. _2_ takes the soft pop-rock sound that Andy Shauf is known for, cuts it up a bit, weaves it among other clippings from old film recordings, and adds some groovier beats for good measure. Fragments of scene dialogue serve as vignette-style introductions or song transitions, and modified samples of orchestral passages from old romantic melodramas lay the foundation for each song. The usual soft rock suspects (bass, piano, guitar, etc.) fill things out. Shauf's voice floats on top. It's an unlikely-sounding collage that works delightfully well.
+
+_2_ is a tight, quick album. By the end, the aesthetic feels well utilized, properly explored, but not overplayed. The first couple tracks cut to the chase, making a compelling enough argument for what the album is after, so you should have a good idea of whether you'll want to stick around by then. If you do, you'll find that _2_ is well paced and dynamic, with nicely distributed highlights that deliver a reason to keep listening every couple minutes. I had this album on loop for a good chunk of the year so I can attest to it rewarding repeat listens pretty well.
+
+It's also conceptually cohesive, but not in the plot-heavy way that Shauf's solo work is known for. Usually with Shauf you're looking out for repeat names or common references between songs that hint at the broader storyline you're meant to be piecing together. By contrast, _2_ works more with character _archetypes_ in a lyrical approach that feels much more thematically direct, coming from Shauf. Over the course of _2_'s runtime, he leverages the unique experimental aspects of the album's _sonic_ approach to also construct a _thematic_ and narrative collage out of those separate dialogue fragments. Shauf's own lyrics act as the glue that binds these different characters in their different contexts to the same overall picture of the (melo)drama of romantic domestic partnership. Ultimately, that picture is not particularly self-serious. The dialogue and film score samples are all exaggerated, and the band's own arrangements are light and groovy. Shauf's lyrics often feel playful. There's some sarcasm. At its core, _2_ prioritizes its own fun and experimentation above all else. It _is_ clever, and there's plenty to consider, but mostly it's just light and fun. It's a good time!
+
+<br></br>
+
+(This album has a version with all the stems separated [on Bandcamp](https://foxwarren.bandcamp.com/album/2-stems-edition) which is always fun to see.)
+
+### _Night Palace_ (Mount Eerie)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/mount-eerie-night-palace.jpg" target="blank"><img decoding="async"  alt="Mount Eerie - Night Palace" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/mount-eerie-night-palace.jpg"/></a>
+**experimental / slacker rock / folk**  
+2024 (via P. W. Elverum & Sun)
+
+<div className='lyrics'>
+> Some affection is mercurial  
+> I've gone in and out of favor with no footing  
+> But my love for you my child is as permanent as sky  
+> Breathe forever beneath the canopy of my life  
+> While you wait through winters coals illuminate your night  
+> Salmonberries will return and you are always in my eye  
+> [I love you](https://genius.com/Mount-eerie-my-canopy-lyrics)
+
+> Returning home Odysseus rides the ferry at night  
+> I finally return to the end of our long road  
+> There's been weather again and there's debris on the mud beneath tires  
+> Clawed down by a sky unloading  
+> And I see a cutting reflection of something I don't recognize through the dark trunks  
+> I go out into it to look
+
+> I told a fish, "I like how you move through the water as one flowing muscle"  
+> [The fish said, `"I dig your style too, man"`](https://genius.com/Mount-eerie-i-spoke-with-a-fish-lyrics)
+
+> [And who isn't my neighbor on this flaming globe?](https://genius.com/Mount-eerie-i-need-new-eyes-lyrics)
+</div>
+
+Cold wind howls through this whole album, and rain pelts or patters, and wood cracks and crackles in the flames. Guitars buzz and hum and break down into dirty, noisy chaos, melting into a fog of fuzzed-out cymbals and unidentifiable droning. Drums bang on like tree limbs knocking together in a maelstrom. Some other musical stormy natural imagery goes here. Something about black birds. Whatever, Phil Elverum is better at this sort of thing than I am; he's had like 30 solid years of professional practice.
+
+_Night Palace_ is overtly noisy and abrasive in the way that thunder, wind, sleet, colonization, genocide, privilege, and existential nihilism are. It is also captivating and beautiful, in the way that the windswept and storm-carved landscapes, or the ever-shifting, ever-rising oceans, or the blurry and fraught present moment shaped by foggy (and fraught) history, also are. I guess it's sort of a slacker-rock folk-rock album, but _Night Palace_ is so drenched in experimentation and exploration that genre tags and descriptors feel particularly inadequate here. It's got field recordings and spoken word tracks. It's got drone and noise and a little black-metal screaming. Small folk tune interludes and expansive rock ballads. All a bit waterlogged, a little weathered and worn. Somehow Elverum weaves a coherent album listening experience out of the noise and natural chaos, and it's like nothing else. _Night Palace_ sounds like _Night Palace_.
+
+The subject matter is _also_ a surprisingly-cohesive hodgepodge. Elverum muses about seemingly anything and everything, a whole scattered mess of topics and concepts that bleed into and tumble out of each other. Nature runs its roots through everything, though, and through the wind and fog it all holds together.
+
+I kinda want [the book version](https://www.pwelverumandsun.com/products/night-palace-book). Also the vinyl would be cool I guess. Please give this album a try.
+
+<br></br>
+
+(This album has a version with all the stems separated [on Bandcamp](https://pwelverumandsun.bandcamp.com/album/night-palace-stems-edition) which is always fun to see.)
+
+
+### _Straight Line Was A Lie_ (The Beths)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/the-beths-straight-line-was-a-lie.jpg" target="blank"><img decoding="async"  alt="The Beths - Straight Line Was A Lie" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/the-beths-straight-line-was-a-lie.jpg"/></a>
+**powerpop / indie pop rock**  
+2025 (via ANTI-)
+
+<div className='lyrics'>
+> I still go, it's been a year now  
+> Past the chain link fence that keeps out  
+> With the bridges all still blown out, you can't amble anymore  
+> Overgrown, abandoned  
+> I take off my shoes to cross and  
+> [Find the current has forgotten how it felt to break the world](https://genius.com/The-beths-mosquitoes-lyrics)
+
+> And I know  
+> I'm a collaboration! Bacteria, carbon and light.  
+> A florid orchestration! A recipe of fortune and time.  
+> Yeah it's a lot to take in!  
+> [When I try, I see a short word.](https://genius.com/The-beths-metal-lyrics)
+
+> If I go digging I'll never stop  
+> Fossilized nightmares in every spot  
+> Ancient pottery filled with fault  
+> [In the negative space that held my soul](https://genius.com/The-beths-ark-of-the-covenant-lyrics)
+
+> I wanna scream your name  
+> I wanna know what I've got  
+> [I wanna love till my heart stops](https://genius.com/The-beths-til-my-heart-stops-lyrics)
+</div>
+
+I love how intentional Liz Stokes is with her lyrics. She's usually conversational and often direct, but she also knows how to wring meaning out of abstraction, when to pull out a metaphor, play with imagery, or build a narrative. There's usually something concrete, something particular that she seems to be aiming at with each song. Her ideas always feel approachable, but the process of discovery is still satisfying. I'm not describing a hollow lyrical puzzle box either. There is intent in the structure, and an emotional truth at the core.
+
+It helps that the rest of The Beths are also great at what they do. Stokes is a great vocalist. They have a great lead guitarist, a great drummer, and a great bassist. Their arrangements are great. They've polished their powerpop chops over 4 albums now, and this is definitely their smoothest, most refined album yet. They've always excelled at that full, energetic, driving rock sound, with their signature full-band harmony, but in _Straight Line Was A Lie_ The Beths show more willingness to play with space, and to bring the tempo down from its max setting now and then. The result is an album that feels more considered, more varied than some of their prior work.
+
+_Straight Line Was A Lie_ is also thematically strong and well-considered. Stokes gave [an (excellent) interview](https://stereogum.com/2320940/the-story-behind-every-song-on-the-beths-new-album-straight-line-was-a-lie/interviews) where she discusses the process of writing each song, and finally tying it all together. After writing most of the album, and "being able to kind of see it as a whole, it was like, what's the throughline, what's the theme? What's my brain been trying to tell me over the last two years with this body of work? And that was when 'Straight Line Was A Lie' came. ... that song, I, like, coughed it out on the bus." It became the opening, the title track, and the throughline. _Straight Line Was A Lie_, as a song and an album, is about grappling with your own internal limitations and shortcomings within the chaos of the external world, "falling into the folly of believing that everything would keep getting better, and that progress is just inevitable and you just keep improving, \[when\] really it's more just finding meaning in the work, finding meaning in the maintenance, and just going through until... until you die."
+
+They played most of this album live in a [special KEXP session](https://youtu.be/tj1IhGMH_zE) that's worth watching.  
+That [Stereogum interview](https://stereogum.com/2320940/the-story-behind-every-song-on-the-beths-new-album-straight-line-was-a-lie/interviews) really is good.  
+Their [YouTube channel](https://www.youtube.com/@TheBeths/videos) is full of fun [videos](https://youtu.be/myOc67hzv1M) of [behind](https://youtu.be/L-e2HupeAfQ) the [scenes](https://youtu.be/sfTNon6qQgo) studio moments and [tour video diary](https://youtu.be/q21no-ueAQg) stuff.  
+Their bassist's [Breakfast and Travel Updates blog](https://www.breakfastandtravelupdates.com/) is also legendary. Here's the one for [the day when all their instruments got stolen](https://www.breakfastandtravelupdates.com/blog/day-14-tourcoing). Yikes.
+
+
+### _Double Infinity_ (Big Thief)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/big-thief-double-infinity.jpg" target="blank"><img decoding="async"  alt="Big Thief - Double Infinity" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/big-thief-double-infinity.jpg"/></a>
+**psychedelic folk rock**  
+2025 (via 4AD)
+
+<div className='lyrics'>
+> My mother and my grandma - my great grandmother too - wrinkle like the river, sweeten like the dew, and as silver as the rainbow scales that shimmer purple blue. How can beauty that is living be anything but true?  
+> So let gravity be my sculptor; let the wind do my hair; let me dance in front of people, without a care; let me be naked, alone, with nobody there, with mismatched socks and shoes and stuff stuffed in my underwear.  
+> [Incomprehensible, let me be.](https://genius.com/Big-thief-incomprehensible-lyrics)
+
+> I'll follow you forever, even without looking  
+> You call we come together  
+> Even without speaking I can tell what you are thinking  
+> Even without saying  
+> We dream our dreams together, even without laying in the same bed  
+> And you sang for me!  
+> [You sang for me](https://genius.com/Big-thief-los-angeles-lyrics)
+
+> [All night all day I could go down on you](https://genius.com/Big-thief-all-night-all-day-lyrics)
+</div>
+
+Big Thief is the best, okay? Adrianne Lenker's music is fun and cool. I understand that people think the lime artwork is weird, but I got a sorta marbled green vinyl version of this album out of that, so I don't wanna hear any ~~limes~~ ~~grapes~~ gripes about it.
+
+The first half of _Double Infinity_ is one continuous flow of Big Thief jamming out in peak form, in the company of [like 10 additional session musicians](https://en.wikipedia.org/wiki/Double_Infinity#Personnel). It leans into their psychedelic side enough to sound fresh, and into their jammy improvisational side enough to sound loose and fun, and into the like 10 additional session musicians enough to sound full and collaborative. Excellent sequencing and track transitions. This is the second Lenker-related project of 2025 that uses laughter as an effective song transition. Hehe.
+
+The back half of _Double Infinity_ is the divisive encore. There are interesting choices here! "No Fear" is a lyrical mantra over a bass mantra. "Happy With You" finds a simple truth and doubles down on it, and triples down on it, and quadruples, etc., over the jammiest of all the jams. "Grandmother" has funky improvised backing vocals and another simple, sentimental lyrical core. I like each of these choices in isolation, but they're all right next to each other in the same 3-track run, so they join forces to become "that sorta weird and ultra-repetitive _section_ of the album". I like these tracks! But they're an overall pacing bump. At the same time, I wouldn't want to touch that first half to redistribute these tracks elsewhere. Bit of a dilemma.
+
+_Double Infinity_ also did the thing where it's a _9 track album_ that had _4 singles_ come out ahead of its release, including 3 of the 5 tracks that make up that excellent "first half". I already think of singles as a sort of necessary evil for the industry, best avoided by the listener (for albums you're already anticipating) as much as possible. _Double Infinity_ was a great case study for when pre-release rollout seems fine-tuned for sabotaging online discourse when the album finally comes out in full. Take Laraaji's vocal improvisations on "Grandmother" out of the context of the album's overall tone. Give people enough time to take for granted the wonderful verses of "Incomprehensible". Disrupt the sublime sequencing and flowing transitions of the album's first half. What highlights remain for discussion? Well, there's always that sorta weird and ultra-repetitive section!
+
+
+### _Imaginal Disk_ (Magdalena Bay)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/magdalena-bay-imaginal-disk.jpg" target="blank"><img decoding="async"  alt="Magdalena Bay - Imaginal Disk" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/magdalena-bay-imaginal-disk.jpg"/></a>
+**synthpop / psychedelic / maximalist**  
+2024 (via Mom + Pop Music)
+
+<div className='lyrics'>
+> Fate, lead me astray  
+> Take me whole and wash me away  
+> All along there was a story  
+> [Spare me all the allegories, please](https://genius.com/Magdalena-bay-cry-for-me-lyrics)
+
+> Damn, man, play that thing  
+> Makes me think of summer winds  
+> And faces that I know  
+> Just the ones I love to hold  
+> I swear that through your eyes  
+> [Everything is brighter all the time](https://genius.com/Magdalena-bay-angel-on-a-satellite-lyrics)
+</div>
+
+Adored and discussed to death for very good reason. This is 54 minutes of crazy production acrobatics in the form of dance-y synthpop that will sometimes just seamlessly phase transition into proggy psychedelic synth-rock (or any number of other synth-things) for fun. Lyrics trend toward the abstract, maybe even a bit vague, but they definitely get the vibes across. This thing is just wall-to-wall bangers with extremely polished and detailed production that reveals more and more of itself on repeat listens. It's well worth checking out, topped a lot of the 2024 year-end lists, super well-received, go listen etc etc.
+
+Okay here are my two maybe slightly less common notes about it.
+
+One:  
+I didn't really get into the "loose concept album" that's buried in here. I get the broad strokes and how they relate to themes of self exploration and consciousness and whatnot, but in terms of particulars, of characters and plot, there's very little here that's tangible enough to firmly grasp without stepping outside the "text" of the album itself.
+
+I appreciate that the music videos and other media around the album apparently go further to suggest these particulars! It seems that the tangible concept of a story does actually exist _around_ this album in some form. I also appreciate that both members of the Magdalena Bay duo acknowledge the "looseness" of the concept. In their words, "once we had the music and we had the sequencing and we listened through the record, we were like, 'Well, we could overlay this story on top of the music' - and that’s the story of the visuals. But it’s not necessarily inextricably tied to the music, it’s just a layer of meaning on top of the record" ([source](https://www.vogue.com/article/magdalena-bay-imaginal-disk-interview)). I think _Imaginal Disk_ stands well enough on its own, even in a form that lacks those particulars. The full-fledged narrative experience is not required. That way lies endless fan theories about what all even happened if you're interested, though.
+
+Two:  
+On first listen I did not pay attention to my progress in the tracklist, so I was 90% sure I was listening to the last song on the album like 4 separate times. This didn't end up being a bad thing, it was just funny on a first listen. The sequencing and track transitions work well if you're paying attention! I think they just happened to write several good candidates for album closers here, and I was a bit distracted when I initially checked out _Imaginal Disk_. I've made up for that blunder by listening to it a bunch more times since, so I think we're all good now.
+
+
+### _Cancionera_ and _De Todas Las Flores_ (Natalia Lafourcade)
+<div style={{display: 'flex', direction: 'ltr', gap: '10px'}}>
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/natalia-lafourcade-cancionera.jpg" target="blank"><img decoding="async"  alt="Natalia Lafourcade - Cancionera" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/natalia-lafourcade-cancionera.jpg"/></a> <a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/natalia-lafourcade-de-todas-las-flores.jpg" target="blank"><img decoding="async"  alt="Natalia Lafourcade - De Todas Las Flores" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/natalia-lafourcade-de-todas-las-flores.jpg"/></a>
+</div>
+**singer-songwriter / mexican chamber folk / strong vocals**  
+_Cancionera_ - 2025 (via Sony Music)  
+_DTLF_ - 2022 (via Sony Music)  
+
+<div className='lyrics'>
+> Que te vaya bonito, Nicolás, adonde quiera que lleves tu vuelo  
+> En la tierra seguiremos cultivando ese amor para vivir que tú has sembrado  
+> Que te vaya bonito, Nicolás, no tengas miedo de cruzar la puerta  
+> [Pues los dioses, los maestros de esta tierra reclamaron a este mundo tu presencia](https://genius.com/Natalia-lafourcade-que-te-vaya-bonito-nicolas-lyrics)
+</div>
+
+Natalia Lafourcade has been popular for a while, but these albums brought her into my little sphere of music discussion, and I'm glad cuz they're delightful.
+
+_De Todas Las Flores_ has a stripped back, raw and intimate presentation that puts a lot of emphasis on Lafourcade's vocal performance. Arrangements often feel understated even when there's a lot going on technically. Guitars, strings, and background vocals convey plenty of movement and progression underneath Lafourcade's vocals, when she's not weaving in and around them herself. Tracks often take on something of a blooming shape, gradually adding background elements over time until you can see their full form. Then they might twist a time or two to show you another angle. Everything has a natural flow to it. Lafourcade's performances convey an element of discovery, like you're seeing something new tumble out of her in the process of recording.
+
+_Cancionera_ feels like Lafourcade and her ensemble of collaborators enjoyed the process of creating _De Todas Las Flores_, and they wanted to do it again, but bigger and warmer, leaning into the fun, the discovery, and the ensemble. They committed to recording full takes live to tape for this, with "18 musicians playing together with Natalia in a live setting" and "no tricks, no contrivances of any kind" ([source](https://archive.ph/cVefZ)). So _Cancionera_ has a sense of place and of community that was present at times in _De Todas Las Flores_, but was not nearly so strong. There's somewhat less melancholy in the subject matter too, leaving room for more playfulness to shine through.
+
+For _Cancionera_, Lafourcade takes on a whole alter ego, a "songstress soul \[that\] cornered me into maximum creativity through dance, exploration of movement, exploration of painting, many things I love and had perhaps kept locked away in a drawer" ([source](https://www.billboard.com/music/latin/natalia-lafourcade-new-album-cancionera-1235952999/)). You can see this songstress persona in the album's [music videos](https://www.youtube.com/watch?v=_DTjXZCoOkc&list=PLeSZ3Yy6leJJrotT1kEjs_HYKpzfZUsPu&index=10), which lend a vibrant cinematic dimension to the whole experience of the album. _Cancionera_ takes on an exaggerated studio setting draped in heavy blue and red stage curtains and cut through with dramatic lighting. It also gains a full cast. You can see the actual humans that brought it into being, put some faces to voices and instruments, and place Lafourcade's own immense presence into the context of those 18 fellow musicians. Watch everyone smile, clap, and dance as they discover the music together.
+
+In these videos, the songstress persona is larger than life, and at times she breaks past the bounds of the dark studio to venture into nature. In the studio, she often fills the frame, defines the space. In nature, the songstress is instead a small streak of flowing red that dances through fields, under forest trees, over sand dunes, or waist-deep in waves of sunlit water. Lafourcade [presents](https://www.natalialafourcade.com.mx/en/music) _De Todas Las Flores_ as an "introspective and deeply emotional journey," and it certainly has much to offer there. _Cancionera_, on the other hand, "is a musical and visual manifesto" that seeks "to transform music into a space of wonder". You should listen to _De Todas Las Flores_, because its journey is worth it. You should experience _Cancionera_ as a full audio-visual work, because its space is wondrous.
+
+
+### _Keep Me On Your Mind / See You Free_ (Bonny Light Horseman)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/bonny-light-horseman-keep-me-on-your-mind-see-you-free.jpg" target="blank"><img decoding="async"  alt="Bonny Light Horseman - Keep Me On Your Mind / See You Free" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/bonny-light-horseman-keep-me-on-your-mind-see-you-free.jpg"/></a>
+**folk rock americana**  
+2024 (via Jagjaguwar)
+
+<div className='lyrics'>
+> Speak to me, muse, of the way that it feels  
+> To be free as a sparrow that flies in the field  
+> Aw, she likes me to borrow, she loves me to steal  
+> Alright  
+> Speak to me, muse, of the sun going down  
+> And the hurrying past of the burying ground  
+> With the green, green grass growing all around  
+> [Alright](https://genius.com/Bonny-light-horseman-speak-to-me-muse-lyrics)
+
+> I saw the kids we once were in that picture you sent me  
+> Cupping a cig on the fire escape, reeling a line of laundry  
+> Singing to the mandolin over the roadside din  
+> Standing in your kitchen singing to the mandolin  
+> Thumbing through _The Waste Land_, making eggs to _Graceland_  
+> [Singing to the mandolin, singing to the mandolin](https://genius.com/Bonny-light-horseman-singing-to-the-mandolin-lyrics)  
+
+> And your legs, your legs all the time  
+> You were running like a pony by the oceanside  
+> There was sea salt in the bedsheets where we slept at night  
+> [And your legs, your legs all the time](https://genius.com/Bonny-light-horseman-your-arms-all-the-time-lyrics)
+</div>
+
+A big long album packed full of S-tier americana rock. My most-listened album of 2025. I guess it's fair to say it's a bit bloated, but I also have a hard time deciding which tracks are worth cutting. This was my comfort album in late spring. It's got 20 tracks, it's just over an hour long, and there were a few days where I just had it on a back-to-back loop.
+
+The pitch for Bonny Light Horseman is that they're an indie folk supergroup of 3 artists that have been quietly influential for a long while. Anaïs Mitchell is best known for the concept album turned stage musical _Hadestown_. Eric D. Johnson is known for Fruit Bats and the Shins. Josh Kaufman plays a ton of instruments and has a whole slew of producer, musician, composer, arranger, and songwriter credits (notably with The National and Taylor Swift among many others).
+
+The pitch for this album is that these 3 master artists decided to just get together and have a fun time recording some good songs that they wrote, man. Clearly they put significant time and thought into the writing part - there's plenty to chew on in the arrangements and the lyrics - but the recording process itself comes across as this free-flowing effortless experience. They recorded much of the album in public, at an Irish pub with a little crowd. It feels candid, intimate, like you could've been sitting at the bar having a beer while these insane musicians were throwing down and having a great time on the other side of the room. It's never a full on audio documentary like Adrianne Lenker's live album above, but the end result is _just unvarnished enough_ to infuse this album with the character of a particular setting, and its performances with the essence of a particular moment.
+
+Mitchell and Johnson each have striking, peculiar, strong voices. They play co-lead with vocals a lot, trading perspectives and handing verses back and forth. You might think they'd clash when they come together and harmonize, but they complement instead. I was a fan of Anaïs Mitchell before I knew about this band, so I showed up to this album for her, but the synergy of this group thoroughly captured me.
+
+If you like Mitchell's vocals and her poetic, highly structured approach to lyrics, definitely check out _Young Man In America_ or one of her other solo albums. She's great.  
+If you're curious about the pub and the process for this album, you can see some clips from the recording session in these videos for [Old Dutch](https://youtu.be/s3UlBffDlmk) and [When I Was Younger](https://youtu.be/-czCyia1IoE).
+
+
+### _Glory_ (Perfume Genius)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/perfume-genius-glory.jpg" target="blank"><img decoding="async"  alt="Perfume Genius - Glory" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/perfume-genius-glory.jpg"/></a>
+**art rock / progressive / atmospheric**  
+2025 (via Matador Records)
+
+<div className='lyrics'>
+> Can I get off without reliving history  
+> and let every echo just sing to itself?  
+> Can I move on without knowing specifics  
+> [while memories hum like a hive shaken out?](https://genius.com/Perfume-genius-its-a-mirror-lyrics)
+
+> Did it glow in the dark? Was there a choir winding on?  
+> Can you hear me at all?  
+> It's only your name repeating  
+> Green and wide  
+> Bolts of white iris tenderize  
+> Sobs from the silo  
+> [Hung, dried, left for tomorrow](https://genius.com/Perfume-genius-left-for-tomorrow-lyrics)
+
+> Loosened, roving stray  
+> Guest of body  
+> Now in quiet glory  
+> Glory  
+> [Finding shade](https://genius.com/Perfume-genius-glory-lyrics)
+</div>
+
+Perfume Genius continues to put out consistent, stylish, well-realized albums. It's a bit subdued, but _Glory_ still feels like a culmination of all the stylistic experimentation and progression that Hadreas has undergone through his career. There's some old and some new. "Me & Angel" echoes the minimal piano ballads of his first few albums. Several tracks carry on a more-accessible continuation of _Ugly Season_'s more progressive, psychedelic experimentation, where Hadreas stretches tracks out like putty, seeing if he can twist a couple more shapes out of them before they break. The name [Jason](https://open.spotify.com/track/34B5INdEjbTXvNkCC5GtYz) makes [another](https://open.spotify.com/track/0P3LPBjtmT3T97T4TDPpPZ) return. [Alan](https://open.spotify.com/track/0qDsmWe20HzPpFHEVMi7ym) is all over the production credits (and in [some](https://youtu.be/IEmQNS2QgTg) of the [videos](https://youtu.be/hx2_NGaDPrk)). Longtime producer Blake Mills is still here. The band that joins him is familiar to such an unusual degree that it's noteworthy that Hadreas "wrote a lot of these songs on the piano because \[he\] was leaving room for the band" ([source](https://stereogum.com/2301844/perfume-genius-new-album-glory/interviews/footnotes-interview)).
+
+Conceptually, _Glory_ is "about trying to be as much as I can where I am ... \[and appreciating\] all the things I've been carrying this whole time that haven't changed" ([source](https://www.theguardian.com/music/2025/jan/24/perfume-genius-i-want-to-feel-extremes-but-im-not-as-self-destructive-now)). Hadreas's perspective as a reasonably successful, ([now middle-aged](https://open.spotify.com/track/1cfD3DSqV5Dnv6b8qitlxr)) gay man in (indie alt-)rock is still frustratingly rare, and it's clear he still carries the weight of that reality with him. Such an expansive and fuzzy mission statement, being as much as he can be, is the perfect approach to take here. Hadreas is introspective and anxious - about his life, his career, his body. He's self-isolating and critical of his self-isolation. He anticipates grief, explores abstract archetypal tragedy, and examines the absurdity of the idea that creativity _needs_ tragedy, feeds on it. He exalts the beauty and the struggle of his own long-term relationship. He wallows and he soars. He's nasty and silly and sexual. He may or may not cannibalize his friend Tate? I'm not entirely sure.
+
+Hadreas manages to be as much as he can be, where he is, and there aren't very many artists where he is, and I'll take as much as I can get, because I definitely need it.  
+[Here watch this one.](https://youtu.be/IEmQNS2QgTg)
+
+
+### _Lives Outgrown_ (Beth Gibbons)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/beth-gibbons-lives-outgrown.jpg" target="blank"><img decoding="async"  alt="Beth Gibbons - Lives Outgrown" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/beth-gibbons-lives-outgrown.jpg"/></a>
+**progressive / psychedelic / chamber folk / strong vocals**  
+2024 (via Domino)
+
+<div className='lyrics'>
+> Tell me all you want to say  
+> Tell me who you are today  
+> Free from all I hear inside  
+> Come over here,  
+> [Listen to me](https://genius.com/Beth-gibbons-tell-me-who-you-are-today-lyrics)
+
+> Far from our conscious mind lie those fallow fields  
+> Where open hearts will wander  
+> Sweet whispering love, come to me  
+> [When you can](https://genius.com/Beth-gibbons-whispering-love-lyrics)
+</div>
+
+Best known as the lead singer of the legendary Portishead, Beth Gibbons doesn't release music very often these days, so _Lives Outgrown_ is a rarity. It's also high quality and wonderfully experimental while still ultimately feeling like chamber folk album, albeit a particularly lush one. James Ford effectively plays an entire eclectic orchestra of instruments - he has _a few dozen_ instrument credits in the [personnel notes](https://en.wikipedia.org/wiki/Lives_Outgrown#Personnel) - and then sometimes there's also just a whole _actual_ orchestra in there.
+
+Despite all this production, the album generally sounds _deep_, rather than _big_, to me. It's brooding and atmospheric more than it is bombastic or theatrical. Regardless, it's quite dense, with arrangements exploring a wide range of textures and incorporating lots of global influences. I particularly appreciate the amount of thought and attention given to the percussion here, which is often just as dynamic and multi-textured as the other instrumental arrangements. Meanwhile, Gibbons delivers her vocal performances with a deftness that perfectly matches the eccentricity of everything else. Lyrically, _Lives Outgrown_ is often bleak, sometimes hopeful, but always beautiful. Gibbons expresses grief, frustration, and disappointment with the personal maturity of her 60 years of perspective and experience. 
+
+### _Only Dust Remains_ (Backxwash)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/backxwash-only-dust-remains.jpg" target="blank"><img decoding="async"  alt="Backxwash - Only Dust Remains" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/backxwash-only-dust-remains.jpg"/></a>
+**hip hop / rap / heavy**  
+2025 (via Ugly Hag Records)
+
+<div className='lyrics'>
+> No matter how you quote this  
+> Never mince your word and everything is heard  
+> Just know the judges remain partial in these solemn moments  
+> You might be judged but there is love between the hocus pocus  
+> [I hope you know this](https://genius.com/Backxwash-history-of-violence-lyrics)
+
+> Wake the fuck up!  
+> [Wake the fuck up!](https://genius.com/Backxwash-wake-up-lyrics)
+
+> A voice whispers but I can't hear it  
+> She's miles away 'til it's all clear in me  
+> What wasn't I seeing? What wasn't I being?  
+> Eyes too wide, I couldn't see  
+> Feet on the ground, I was walking away from me
+> 
+> (quoting Nina Simone)  
+> _"My thing, what I hope to do all the time, is to be so completely myself,  
+> which that's what I hope I am,  
+> to be so much myself that my audiences, and even people who meet me, are confronted.  
+> They're confronted with what I am, inside and out, as honest as I can be.  
+> And this way, they have to see things about themselves."_  
+> 
+> I was walking away  
+> [Away from me](https://genius.com/Backxwash-only-dust-remains-lyrics)
+</div>
+
+The Nina Simone quote in the title track feels like a thesis statement for this whole album. Backxwash confronts her self - her identity, her perspective, her self-doubt, her trauma - and she does so openly. She delivers her unique perspective in a voice that is also undeniably her own, and her raw self-excavation is worth experiencing. Come see things about yourself.
+
+This project comes after a trilogy of albums from her, all of which leaned into harsher horrorcore and industrial production elements. I respect these projects! There's plenty to get out of them, but I'm glad to have _Only Dust Remains_ as a considerably more accessible entry point for this artist. ["VIBANDA"](https://open.spotify.com/track/3eTHZqcPNCCimvTbTrQ2r9) and ["IN THY HOLY NAME"](https://open.spotify.com/track/0Va2ohhvLrqeH1BDwOcjov) are worth a listen if you're curious about those other projects. _I LIE HERE BURIED WITH MY RINGS AND MY DRESSES_ is particularly good imo.
+
+
+### _I'm Only F\*\*king Myself_ and _This Wasn't Meant For You Anyway_ (Lola Young)
+<div style={{display: 'flex', direction: 'ltr', gap: '10px'}}>
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/lola-young-im-only-f--king-myself.jpg" target="blank"><img decoding="async"  alt="Lola Young - I'm Only F**king Myself" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/lola-young-im-only-f--king-myself.jpg"/></a> <a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/lola-young-this-wasnt-meant-for-you-anyway.jpg" target="blank"><img decoding="async"  alt="Lola Young - This Wasn't Meant For You Anyway" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/lola-young-this-wasnt-meant-for-you-anyway.jpg"/></a>
+</div>
+**alt pop-rock / singer-songwriter / strong vocals**  
+_IOFM_ - 2025 (via Island Records)  
+_TWMFYA_ - 2024 (via Island Records)
+
+<div className='lyrics'>
+> You make it hard to see beneath the rubble  
+> While I shovel that shit to the left, say you're not that kind of guy  
+> I work hard to stay in your good books  
+> [But you don't even read, so why do I try?](https://genius.com/Lola-young-good-books-lyrics)
+</div>
+
+Young's vocals are absolutely killer on both of these outings, and she has an almost violently passionate, unapologetic frankness that gets certain tracks and lines lodged in my head until I come back and listen again.
+
+The one-two combo of "Good Books" into "Wish You Were Dead", the first two tracks from _This Wasn't Meant For You Anyway_, made such a strong first impression on me. The rest of that album is decent, but its follow-up, _I'm Only F\*\*cking Myself_, feels more consistent in quality and somewhat more daring in its variety, so it gets a slightly higher recommendation from me overall. The album is well sequenced to get the most out of that variety without wearing out any one particular sound.
+
+On repeat listens, I do tend to skip the intros, outros, and the apparently-obligatory voice memo acoustic recording as a second-to-last track on both of these albums. On paper I appreciate these glances into Young's writing and recording processes! In practice the contrast is a bit too jarring to feel like it fits with what I'm looking for when I return to her music.
+
+Anyway, Young's trajectory as an artist is exciting, and she seems to be building momentum with these releases, so I'll definitely be looking out for whatever she does next.
+
+
+### _Forever Howlong_ (Black Country, New Road)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/black-country-new-road-forever-howlong.jpg" target="blank"><img decoding="async"  alt="Black Country, New Road - Forever Howlong" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/black-country-new-road-forever-howlong.jpg"/></a>
+**baroque pop / art rock / theatrical / lots of instruments**  
+2025 (via Ninja Tune)
+
+<div className='lyrics'>
+> The moon was low and the road dusty  
+> When I was captured by some thieves  
+> My pockets emptied  
+> I said "You'll have to kill me to cut this jewel out of me"  
+> [They let me go](https://genius.com/Black-country-new-road-two-horses-lyrics)
+
+> I shall boil some beans  
+> I should get my vitamin B  
+> The last video I watched told me the pH of my gut microbiome was certainly causing my blues  
+> [So I fill myself up with fiber as dusk begins to set](https://genius.com/Black-country-new-road-forever-howlong-lyrics)
+</div>
+
+It's always been thrilling to see BC,NR pull together and execute their massive, elaborate compositions, and flex their extensive instrumental skills. That's still true for _Forever Howlong_. With 3 singers taking turns to fill in for their departed frontman, there's now even more variety where before the vocals were a constant sonic throughline. Each new frontwoman takes their own slightly different approach to lyrics and performance, and repeat listens had me picking apart those differences more and more, personally. I find it a bit awkward in hindsight. I have preferences between each singer's vocal quality and lyrical approach now, and it might take some work on my part to avoid disappointment if the next album doesn't strike a balance with the vocalists that suits those preferences. At least the arrangements and the instrumental performances will probably always be compelling, all else aside!
+
+If you want to literally _see_ them execute some of their elaborate compositions, check out [this KEXP performance](https://youtu.be/MkypqnDwsUI).
+
+
+### _Virgin_ (Lorde)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/lorde-virgin.jpg" target="blank"><img decoding="async"  alt="Lorde - Virgin" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/lorde-virgin.jpg"/></a>
+**electronic alt pop**  
+2025 (via Universal Music New Zealand)
+
+<div className='lyrics'>
+> I've been the siren, been the saint  
+> Been the fruit that leaves a stain  
+> I've been up on the pedestal  
+> [But tonight I just wanna fall](https://genius.com/Lorde-shapeshifter-lyrics)
+
+> Oh, where did it go?  
+> Wish I'd kept the Clearblue  
+> I'd remember how it feels to  
+> Be so bare in the throes  
+> I wish I'd kept the Clearblue  
+> [I'd remember how it feels to be](https://genius.com/Lorde-clearblue-lyrics)
+</div>
+
+Vulnerable, intimate transparency is the whole entire idea here, and I think it works. This does not hit the same astronomical heights of wall-to-wall catchy danceable pop anthems that _Melodrama_ achieved, which makes sense. It's clearly aiming in a different direction. It _does_ manage to avoid the somewhat baffling, awkwardly bland territory that _Solar Power_ got a bit lost in. Compared to Lorde's first couple albums, _Virgin_ is still mellower, slightly slower, but it's more in tune with the sound and style of those albums than _Solar Power_ was.
+
+And the slower pace doesn't mean there's less to appreciate in the production! There's a lot going on in the sound design and vocal processing (or lack thereof). Surprising amount of gritty noise and distortion going on. Lots of emphasis on the vocal performance. In production, they were after "this very raw and primal-sounding album," where "finishing was about not overdoing it, and leaving edges unsanded" ([source](https://www.audiotechnology.com/features/producing-lorde)). We're still in the context of mainstream pop here, so "raw" and "primal" are kinda relative terms, but you can definitely see that direction in the final product.
+
+Confessional lyrics make sense here, and Lorde covers topics like sex, self-image, and identity with a sort of graceful candor that feels relatively approachable to me, even when she's talking about an eating disorder or being explicit about sex. Many of these topics are framed as examinations of _past_ experiences, struggles, or trauma, now resolved (at least partially). You can see what these struggles and worries and revelations _were_, down to the bone, and straight through the skin under the zipper - right in the pelvis, even - now that it's over. This doesn't necessarily detract from the mission of the album, it just contributes to that approachable feeling. There's a grounded stability in her perspective that leaves room for catharsis and exploration without feeling _unsafe_.
+
+
+### _For Melancholy Brunettes (& sad women)_ (Japanese Breakfast)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/japanese-breakfast-for-melancholy-brunettes-and-sad-women.jpg" target="blank"><img decoding="async"  alt="Japanese Breakfast - For Melancholy Brunettes (& Sad Women)" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/japanese-breakfast-for-melancholy-brunettes-and-sad-women.jpg"/></a>
+**soft / chamber pop / chamber folk**    
+2025 (via Dead Oceans)
+
+<div className='lyrics'>
+> Well I better write my baby a shuffle good  
+> Or he's gonna make me suffer the way I should  
+> Deep in the soft hearts of young boys so pissed off and jaded  
+> [Carrying dull prayers of old men cutting holier truths](https://genius.com/Japanese-breakfast-mega-circuit-lyrics)
+
+> Heart breaking like a punch card  
+> Keeps his mouth shut, keeps his mind fixed and well hidden  
+> You dream enough for two, dear  
+> [Picture window, looking out on somewhere else](https://genius.com/Japanese-breakfast-picture-window-lyrics)
+</div>
+
+Japanese Breakfast has been bombastic and jubilant. They've been gritty and abrasive. Ethereal, subliminal and dark. Here they're a bit subdued, on the subtle side, but still lush, detailed, polished. Michelle Zauner is still an excellent lyricist and vocalist. Here she examines traditional and contemporary masculinity from a few different angles, often through the lens of desire. In her words, this album "is largely about people, often men, who find themselves seduced by temptation and are duly punished for it" ([source](https://uproxx.com/indie/japanese-breakfast-orlando-in-love-video/)). _For Melancholy Brunettes_ might not reach out and grab you as directly or as forcefully as some of Japanese Breakfast's prior work, but there's plenty here to sit with and consider, and it's all so soft and cozy you might as well settle in.
+
+
+### _Ego Death At A Bachelorette Party_ (Hayley Williams)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/hayley-williams-ego-death-at-a-bachelorette-party.jpg" target="blank"><img decoding="async"  alt="Hayley Williams - Ego Death At A Bachelorette Party" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/hayley-williams-ego-death-at-a-bachelorette-party.jpg"/></a>
+**alt pop rock**  
+2025 (via Post Atlantic)
+
+<div className='lyrics'>
+> And I know that you're probably telling yourself that  
+> No one's gonna love me like you did  
+> And I know that you're probably right about that but  
+> Someone's gonna love me different  
+> [And I want someone to love me different](https://genius.com/Hayley-williams-love-me-different-lyrics)
+
+> Blood oath baby took a vow unspoken  
+> Not on speaking terms now  
+> You could pick up the phone  
+> You could pull up to his house  
+> [You could find out you're alone if you keep fucking around](https://genius.com/Hayley-williams-brotherly-hate-lyrics)
+</div>
+
+A solid hour of extremely solid pop rock from Paramore's Hayley Williams. She's on her own but still very much in her element here. I think if you've liked anything she's done recently you'll probably also find plenty to appreciate in _Ego Death_. There are 20 songs on this thing and they're pretty much all very good.
+
+That said, it's hard for me to talk about this project without talking about how it was released. Williams originally released it as 17 individual singles. Before they hit streaming, there was (briefly) a whole interactive thing where the songs were presented as little icons with no clear listening or release order. _Ego Death_ was not even originally conceived as an album. Williams said (in [an instagram reel](https://www.instagram.com/reel/DM54cJlxja-/), so it's hard to cite,) "the truth is, I didn't set out to make an album. I just needed to write, and I ended up with all these songs, and ... I've never really known what I think the full experience of all of it should be, as if it's one big body of work. I mean, it _is_ a body of work, but I kind of just want to know how _you're_ experiencing it." [Elsewhere](https://youtu.be/v7vnybEB-3I), she talked about wanting to see other people's perspectives of the project, and about feeling like she was too close to the material herself. She was "in the eye of the storm, like you're making things, you're going through shit, and you can't possibly have perspective". It became a community collaborative effort. Williams asked fans to send in playlists with the singles arranged in their personal preferred sequence, with the idea being that she'd pick one she liked for the eventual album release. Then the album came out, and it had 18 tracks on it instead of 17 (a new closer track!). Then a month later, a 19th track came out (another newer closer!). Another week later, there was a 20th (hey, new closer!).
+
+This release process was just very much Not My Jam. On the one hand, it was a genuinely interesting experiment! What if the project is a body of work that just _isn't_ an album? What if you actually _have to_ engage with it differently? On the other hand, it is an album _now_! For people who want it (or anyone new to the project), there is now one official answer, a single canonical order. We didn't do anything with multiple official track sequences or alternative releases or something like that. So there is an album, but it's a weird one, where I know for certain that the track sequencing was done entirely in retrospect, and the artist had mixed feelings about imposing her own artistic perspective on the sequence, and about sequencing the tracks at all in the first place. It was a community effort, but it also turns out that the community had an incomplete set of songs to work with, so those just became the last 3 tracks. Or maybe "Parachute" was the intended ending (all along?), and the other two are bonus tracks? I'm not sure. There was a limited ["Hayley's Mix" physical release](https://store.hayleywilliams.net/products/edaabp-cd-hayley-s-mix) that ended on track 18, with the other two appearing crossed out in sharpie on the front of the CD, but I dunno if this expresses artistic intent about their inclusion or just _teases_ those tracks, which hadn't released yet. They are now included on all the currently-available physical releases that I've seen. Notably, she never made the 3 newest tracks available as singles on streaming services, so if you wanted to drop them into your own personal preferred sequence you'll have to pull them from the album, I guess.
+
+I'm someone who will avoid listening to singles from artists I like so that I can hear them in their full intended context (and intended sequence) when the album releases, so this was gonna be a tough sell for me regardless. Here, there was context but no sequence, unless the sequence was what we as a community wanted to make of it, unless maybe it actually wasn't after all. I don't even know anymore. At least the songs are really good!
+
+
+### _LUX_ (Rosalía)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/rosal%C3%ADa-lux.jpg" target="blank"><img decoding="async"  alt="Rosalía - Lux" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/rosal%C3%ADa-lux.jpg"/></a>
+**maximalist / orchestral / operatic / art pop / strong vocals**  
+2025 (via Columbia Records)
+
+<div className='lyrics'>
+> Sobre mi ataúd KTMs quemando rueda  
+> Lágrimas y goma se derriten en la madera  
+> Gasolina y vino tinto, puros y chocolate  
+> Bailando con amor encima de mi cadáver  
+> Hoy se derrocha, burlando la suerte  
+> Y lo que no hice en vida, lo hacéis en mi muerte  
+> 
+> Tírame magnolias  
+> [Tírame magnolias](https://genius.com/Rosalia-magnolias-lyrics)
+</div>
+
+Everything about this album is impressive. The production quality. The lush instrumentation. The number of languages used. Most of all, Rosalía's vocal performance transcends as the standout among standouts. This album [topped a lot of year-end lists](https://en.wikipedia.org/wiki/Lux_(Rosal%C3%ADa_album)#Year-end_lists), so there's no end of entirely-deserved praise and analysis of it out there. I recommend [this article](https://www.npr.org/2025/12/11/g-s1-99933/the-best-album-of-2025) with 4 different perspectives on why it was NPR's album of the year.
+
+
+### _Who Is The Sky?_ (David Byrne & Ghost Train Orchestra)
+<a className="zoomable" href="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/david-byrne-who-is-the-sky.jpg" target="blank"><img decoding="async"  alt="David Byrne - Who Is The Sky?" className="img_ev3q" src="https://assets.keldev.net/2026/02/albums-i-enjoyed-in-2025/david-byrne-who-is-the-sky.jpg"/></a>
+**quirky silly art pop**  
+2025 (via Matador Records)
+
+<div className='lyrics'>
+> My love gave me a moisturizing thing, said "Hey David, put this on your skin. It says it's anti-aging, antioxidant too. Go ahead and try it, let's see what it can do."  
+> Woke up the next morning, and what do I see? I look like a baby, but I am still me. My honey wakes up. She looks over and screams.  
+> That lotion is magic! [I look like I'm three.](https://genius.com/David-byrne-and-ghost-train-orchestra-moisturizing-thing-lyrics)
+</div>
+
+Who is this guy? Oh it's the Talking Heads guy. David Byrne is still doing David Byrne Things at 73. His modern solo work is supposed to be about as much stage production as musical concert. With that in mind, you should watch this [Tiny Desk concert](https://youtu.be/PNmcF6eRE7w) he did for this album.
