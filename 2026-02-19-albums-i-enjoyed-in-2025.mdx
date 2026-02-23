@@ -47,10 +47,58 @@ import AlbumsTagCloud from "./2026-02-19-albums-tag-cloud";
 I listened to a bunch of good music last year and now I wanna talk about it.  
 I actually wanted to talk about it weeks ago when a year-end list would've been more relevant but I'm slow!
 
+## TODO
+- Finish playlist and link it below
+- Finish final section with tips and resources for keeping up w/ music releases
+- Update the dates on this file and the tag cloud .tsx file to match the final publish date
+    - Update the link to the tag cloud source code with the new filename once that's changed
+- Make the tag cloud code more readable (top-of-file comments at least!)
+- Consider moving tag cloud specific style code elsewhere
+- Consider moving album tags data array elsewhere
+- Remove the draft frontmatter flag
+- Remove this todo list lol
+
 {/*truncate*/}
 
-Ideally this would've been a series of posts that I made throughout the 2025 where I occasionally talked about whatever I'd been listening to recently...
-So this is what happens when I let my plans to make a bunch of posts like that pile up for a whole year! Hopefully I don't do that again this year.
+For an "article", this turned out really long.  
+I'm gonna start with some thoughts and some tools for navigating it, but if you want to jump straight to the albums, here's [a quick link](#albums).
+
+## Some Thoughts
+
+Aight so ideally this would've been a series of posts that I made throughout 2025, where I occasionally talked about whatever I'd been listening to recently...
+But I didn't do that! So this is what happens when I let those plans pile up for a whole year. Hopefully I won't do that again this year. I ended up revisiting most of these albums a lot while I was writing this. The whole thing took a while.
+
+This list is not really ranked. Stuff will be closer to the top based on how excited I am to share my thoughts about it, which is not always the same as how good I think it is relative to the others. I'm not bothering to figure out my 12th favorite album of 2025 vs my 11th and so on. **I liked all of these albums!**
+
+This will all be music I first _listened to_ in 2025, whether it came out in 2025 or not. It's all recent though.
+
+## Navigating This Article
+
+I think the best way to use this post is as a resource, a loose reference guide for some albums you should try at some point.  
+Every entry has these common features
+- Album title and artist name
+- Album cover art
+- A few genre/descriptor words
+- Lyrical excerpts
+- My own thoughts about the thing
+so you can get a few different indications of what the album is like, and decide if you want to try it.  
+So feel free to scroll around the page, skim a couple entries, maybe read a lyric or two, and pick something! Look for where our tastes overlap, or try something new. Use the header links in the outline view on the right to jump around. Read my perspective of what's enjoyable or compelling about an album if you feel like it.
+
+If you want more of a structured on-ramp, I have a couple tools for you.
+
+### Spotify Playlist
+
+I put a few tracks from each album on a playlist. I had plans to be super intentional about track sequencing, to make something that you could just put on and listen straight through while reading or whatever, but that was too much effort and the post is too big to read straight through anyway, so instead this playlist just follows the same album order as the main list.  
+Prolly doesn't flow particularly nicely, and idk what the shuffle experience is like, but if you're more likely to try new music if you have a couple particular tracks to sample here and there, this is for you!
+
+**Playlist link goes here**
+
+### Genre Cloud
+
+I also threw together an interactive genre descriptor tag cloud thing. ([Source code here.](https://github.com/IAmKelDev/keldev-blog-drafts/blob/main/2026-02-19-albums-tag-cloud.tsx))
+
+This'll give you an overall snapshot of what sort of music taste is represented in this list.  
+Click on a particular tag to see the full list of albums associated with that tag. You can then click any album in the list to jump straight to the full entry for that album.
 
 export const albumTags = [
     {
@@ -174,24 +222,10 @@ export const albumTags = [
         tags: ["pop", "silly"]
     }
 ]
-
+ 
 <AlbumsTagCloud
     tags = {albumTags}
 />
-
-## Housekeeping
-
-Couple notes:
-
-This list is not really ranked. Stuff will be closer to the top based on how excited I am to share my thoughts about it, which is not always the same as how good I think it is. I'm not bothering to figure out my 12th favorite album of 2025 vs my 11th and so on. I liked all of these albums!
-
-This will all be music I first _listened to_ in 2025, whether it came out in 2025 or not. It's all recent though.
-
-
-
-Did I manage to make a playlist of tracks from these albums?
-If so, hopefully there's a link up here.
-
 
 ## Albums!
 
@@ -742,3 +776,12 @@ Everything about this album is impressive. The production quality. The lush inst
 </div>
 
 Who is this guy? Oh it's the Talking Heads guy. David Byrne is still doing David Byrne Things at 73. His modern solo work is supposed to be about as much stage production as musical concert. With that in mind, you should watch this [Tiny Desk concert](https://youtu.be/PNmcF6eRE7w) he did for this album.
+
+
+## Resources For Music Discovery
+
+I put a lot more effort than I usually do into keeping up with newer releases in 2025, and it turned out to be fun and rewarding!  
+Here are some resources that helped me do that, and some associated advice.
+
+- Wikipedia keeps a big list of notable album releases each year. [Here's the 2026 list](https://en.wikipedia.org/wiki/List_of_2026_albums). I don't recommend trying everything on the list unless you have a ton of time on your hands, but it's a good one to skim through occasionally to keep an eye out for releases from artists you recognize. It gets updated frequently.
+- 

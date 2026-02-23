@@ -32,15 +32,12 @@ const AlbumsTagCloud: React.FC<{ tags: AlbumTag[] }> = ({ tags }) => {
 
   return (
     <>
-        <div>
-            <h2>Genre Cloud</h2>
-            <div className="album-tag-cloud">
-                {sortedTags.map((tag, index) => (
-                <span key={index} className="album-tag" style={{ fontSize: `${getTagSize(tag.count)}px` }} onClick={() => setSelectedTag(tag.tag)}>
-                    {tag.tag}<span style={{ fontSize: `${minTagSize}px` }}> ({tag.count})</span>
-                </span>
-                ))}
-            </div>
+        <div className="album-tag-cloud">
+            {sortedTags.map((tag, index) => (
+            <span key={index} className="album-tag" style={{ fontSize: `${getTagSize(tag.count)}px` }} onClick={() => setSelectedTag(tag.tag)}>
+                {tag.tag}<span style={{ fontSize: `${minTagSize}px` }}> ({tag.count})</span>
+            </span>
+            ))}
         </div>
         <div>
             {selectedTag && (
