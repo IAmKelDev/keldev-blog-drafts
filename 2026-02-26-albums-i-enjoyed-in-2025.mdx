@@ -6,8 +6,9 @@ description: "A list of albums I enjoyed in 2025, with some thoughts about each.
 draft: true
 ---
 
-import AlbumsTagCloud from "./2026-02-26-albums-tag-cloud";
-import "./2026-02-26-albums-i-enjoyed-in-2025.css"
+import AlbumsTagCloud from "./2026-02-26-albums-tag-cloud";         //Defines tag cloud React component for the "Genre Cloud" section
+import "./2026-02-26-albums-i-enjoyed-in-2025.css";                 //Defines all CSS for this post, including for the Tag Cloud component
+import albumTags from "./2026-02-26-albums-tag-cloud-data.json";    //Album genre tag data for the tag cloud
 
 I listened to a bunch of good music last year and now I wanna talk about it.  
 I actually wanted to talk about it weeks ago when a year-end list would've been more relevant but I'm slow!
@@ -16,8 +17,6 @@ I actually wanted to talk about it weeks ago when a year-end list would've been 
 - Finish playlist and link it below
 - Finish final thank you section
 - Make the tag cloud code more readable (top-of-file comments at least!)
-- Consider moving tag cloud specific style code elsewhere
-- Consider moving album tags data array elsewhere
 - Remove the draft frontmatter flag
 - Remove this todo list lol
 
@@ -64,129 +63,6 @@ This'll give you an overall snapshot of what sort of music taste is represented 
 
 Click a tag to see the full list of albums associated with that tag. You can then click any album in the list to jump straight to the full entry for that album.
 
-export const albumTags = [
-    {
-        link: "#live-at-revolution-hall-adrianne-lenker",
-        albumTitle: "Live At Revolution Hall",
-        albumArtist: "Adrianne Lenker",
-        tags: ["live", "singer-songwriter", "folk", "psychedelic", "field recordings", "spoken word"]
-    },
-    {
-        link: "#2-foxwarren",
-        albumTitle: "2",
-        albumArtist: "Foxwarren",
-        tags: ["soft", "sampling", "rock"]
-    },
-    {
-        link: "#night-palace-mount-eerie",
-        albumTitle: "Night Palace",
-        albumArtist: "Mount Eerie",
-        tags: ["folk", "rock", "slacker rock", "field recordings", "noise", "spoken word", "progressive"]
-    },
-    {
-        link: "#straight-line-was-a-lie-the-beths",
-        albumTitle: "Straight Line Was A Lie",
-        albumArtist: "The Beths",
-        tags: ["rock", "powerpop", "pop rock"]
-    },
-    {
-        link: "#double-infinity-big-thief",
-        albumTitle: "Double Infinity",
-        albumArtist: "Big Thief",
-        tags: ["folk", "rock", "psychedelic", "americana"]
-    },
-    {
-        link: "#imaginal-disk-magdalena-bay",
-        albumTitle: "Imaginal Disk",
-        albumArtist: "Magdalena Bay",
-        tags: ["pop", "synthpop", "psychedelic", "progressive", "electronic", "maximalist"]
-    },
-    {
-        link: "#cancionera-and-de-todas-las-flores-natalia-lafourcade",
-        albumTitle: "Cancionera",
-        albumArtist: "Natalia Lafourcade",
-        tags: ["singer-songwriter", "folk", "spanish language"]
-    },
-    {
-        link: "#cancionera-and-de-todas-las-flores-natalia-lafourcade",
-        albumTitle: "De Todas Las Flores",
-        albumArtist: "Natalia Lafourcade",
-        tags: ["singer-songwriter", "folk", "spanish language"]
-    },
-    {
-        link: "#keep-me-on-your-mind--see-you-free-bonny-light-horseman",
-        albumTitle: "Keep Me On Your Mind / See You Free",
-        albumArtist: "Bonny Light Horseman",
-        tags: ["folk", "americana", "rock"]
-    },
-    {
-        link: "#glory-perfume-genius",
-        albumTitle: "Glory",
-        albumArtist: "Perfume Genius",
-        tags: ["singer-songwriter", "pop", "rock", "progressive"]
-    },
-    {
-        link: "#lives-outgrown-beth-gibbons",
-        albumTitle: "Lives Outgrown",
-        albumArtist: "Beth Gibbons",
-        tags: ["folk", "psychedelic", "progressive", "rock"]
-    },
-    {
-        link: "#only-dust-remains-backxwash",
-        albumTitle: "Only Dust Remains",
-        albumArtist: "Backxwash",
-        tags: ["hip hop", "rap", "rock", "sampling"]
-    },
-    {
-        link: "#im-only-fking-myself-and-this-wasnt-meant-for-you-anyway-lola-young",
-        albumTitle: "I'm Only F**king Myself",
-        albumArtist: "Lola Young",
-        tags: ["pop rock", "singer-songwriter", "pop"]
-    },
-    {
-        link: "#im-only-fking-myself-and-this-wasnt-meant-for-you-anyway-lola-young",
-        albumTitle: "This Wasn't Meant For You Anyway",
-        albumArtist: "Lola Young",
-        tags: ["pop rock", "singer-songwriter", "pop"]
-    },
-    {
-        link: "#forever-howlong-black-country-new-road",
-        albumTitle: "Forever Howlong",
-        albumArtist: "Black Country, New Road",
-        tags: ["rock", "pop", "folk", "progressive", "theatrical"]
-    },
-    {
-        link: "#virgin-lorde",
-        albumTitle: "Virgin",
-        albumArtist: "Lorde",
-        tags: ["pop", "electronic"]
-    },
-    {
-        link: "#for-melancholy-brunettes--sad-women-japanese-breakfast",
-        albumTitle: "For Melancholy Brunettes (& Sad Women)",
-        albumArtist: "Japanese Breakfast",
-        tags: ["pop", "folk", "soft", "rock"]
-    },
-    {
-        link: "#ego-death-at-a-bachelorette-party-hayley-williams",
-        albumTitle: "Ego Death At A Bachelorette Party",
-        albumArtist: "Hayley Williams",
-        tags: ["singer-songwriter", "rock", "pop", "pop rock"]
-    },
-    {
-        link: "#lux-rosalía",
-        albumTitle: "Lux",
-        albumArtist: "Rosalía",
-        tags: ["spanish language", "pop", "orchestral", "maximalist", "theatrical"]
-    },
-    {
-        link: "#who-is-the-sky-david-byrne--ghost-train-orchestra",
-        albumTitle: "Who Is The Sky?",
-        albumArtist: "David Byrne & Ghost Train Orchestra",
-        tags: ["pop", "silly"]
-    }
-]
- 
 <AlbumsTagCloud
     tags = {albumTags}
 />

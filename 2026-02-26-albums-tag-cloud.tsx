@@ -1,4 +1,5 @@
 import React from "react";
+import "./2026-02-26-albums-tag-cloud.css";
 
 type AlbumTag = {
     link: string;
