@@ -7,42 +7,7 @@ draft: true
 ---
 
 import AlbumsTagCloud from "./2026-02-26-albums-tag-cloud";
-
-<style>{`
-    .lyrics {
-        font-size: 0.85rem;
-        blockquote {
-            background-color: rgba(129, 129, 129, 0.075);
-            padding-top: 0.2rem;
-            padding-bottom: 0.2rem;
-        }
-    }
-    .album-tag-cloud {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-        width: 80%;
-    }
-    .album-tag {
-        background-color: rgba(129, 129, 129, 0.075);
-        margin-left: 3px;
-        margin-right: 3px;
-        margin-bottom: 5px;
-        line-height: 93%;
-        padding-left: 4px;
-        padding-right: 4px;
-        padding-bottom: 3px;
-        border: 1px solid var(--ifm-color-content);
-        border-radius: 10px;
-        font-family: var(--ifm-heading-font-family);
-        white-space: nowrap;
-    }
-    .album-tag:hover {
-            cursor: pointer;
-            background-color: rgba(129, 129, 129, 0.55);
-        }
-    `}</style>
+import "./2026-02-26-albums-i-enjoyed-in-2025.css"
 
 I listened to a bunch of good music last year and now I wanna talk about it.  
 I actually wanted to talk about it weeks ago when a year-end list would've been more relevant but I'm slow!
@@ -50,8 +15,6 @@ I actually wanted to talk about it weeks ago when a year-end list would've been 
 ## TODO
 - Finish playlist and link it below
 - Finish final thank you section
-- Update the dates on this file and the tag cloud .tsx file to match the final publish date
-    - Update the link to the tag cloud source code with the new filename once that's changed
 - Make the tag cloud code more readable (top-of-file comments at least!)
 - Consider moving tag cloud specific style code elsewhere
 - Consider moving album tags data array elsewhere
