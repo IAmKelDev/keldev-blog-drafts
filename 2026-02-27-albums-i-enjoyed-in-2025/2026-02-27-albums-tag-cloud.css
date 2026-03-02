@@ -23,3 +23,10 @@
     cursor: pointer;
     background-color: rgba(129, 129, 129, 0.55);
 }
+
+@media screen and (max-width: 996px)
+{
+    .album-tag-cloud {
+        width: 90%;
+    }
+}
